@@ -27,6 +27,10 @@ public abstract class NamedEntity extends BaseEntity {
         this.name = name;
     }
 
+    public NamedEntity(@NotBlank @Size(min = 2, max = 100) String name) {
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return super.toString() + '[' + name + ']';
